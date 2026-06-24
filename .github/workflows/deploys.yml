@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true # Changed to true to cancel older builds and save action minutes
 
 jobs:
   build:
@@ -22,9 +22,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - run: npm install  # Using npm install instead of npm ci
+      - run: npm ci # Switch to 'npm ci' for faster, locked-version builds in CI environments
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5 # UPDATED: Keeps it compatible with deploy-pages@v4
         with:
           path: ./out
 
