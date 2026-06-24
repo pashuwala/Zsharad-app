@@ -1,4 +1,4 @@
-name: Deploy Brand Zsharad to GitHub Pages
+name: Deploy Zsharad app to GitHub Pages
 
 on:
   push:
