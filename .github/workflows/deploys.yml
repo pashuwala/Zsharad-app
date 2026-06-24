@@ -28,7 +28,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps  # ✅ Added flag for better compatibility
+        run: npm ci  # ✅ This requires package-lock.json
 
       - name: Build Next.js app
         run: npx next build
