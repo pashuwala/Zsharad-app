@@ -4,9 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // IMPORTANT: Replace 'brand-zsharad' with your repo name
-  basePath: process.env.NODE_ENV === 'production' ? '/brand-zsharad' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/brand-zsharad/' : '',
+  // IMPORTANT: Replace 'zsharad app' with your repo name
+  basePath: process.env.NODE_ENV === 'production' ? '/zsharad app' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/zsharad app/' : '',
 };
 
 module.exports = nextConfig;
