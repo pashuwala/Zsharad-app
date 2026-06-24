@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'export', // 👈 This generates the './out' folder during npm run build
   images: {
-    unoptimized: true,
+    unoptimized: true, // 👈 Required by GitHub Pages since it can't optimize images on the fly
   },
-  // IMPORTANT: Replace 'zsharad app' with your repo name
-  basePath: process.env.NODE_ENV === 'production' ? '/zsharad app' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/zsharad app/' : '',
 };
 
-module.exports = nextConfig;
+export default nextConfig;
